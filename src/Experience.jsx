@@ -4,7 +4,7 @@ import { Perf } from 'r3f-perf';
 import { useFrame } from '@react-three/fiber';
 
 export default function Experience() {
-    const [matcapTexture] = useMatcapTexture('537387_75BBB9_152E5B_0E85E8', 256);
+    const [matcapTexture] = useMatcapTexture('7B5254_E9DCC7_B19986_C8AC91', 256);
     const tempArray = new Array(300).fill().map(() => (Math.random() > 0.5 ? 1 : -1));
     //first I set up an array of 300 with either -1 or 1 as the element
     const meshRefs = useRef([]);
@@ -51,6 +51,7 @@ export default function Experience() {
                         (Math.random() - 0.5) * 10,
                     ]}
                     scale={0.1 + Math.random() * 0.002}
+                    castShadow
                 >
                     <torusGeometry args={[1, 0.6, 16, 32]} />
                     <meshMatcapMaterial matcap={matcapTexture} />
